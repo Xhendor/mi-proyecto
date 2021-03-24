@@ -21,9 +21,24 @@
 <body>
 
 @section ("header")
+    @php
+        $i = 1
+    @endphp
 
-    <h1>Header</h1>
+    @if ($name == 'Walter White' OR $name == 'Jesse Pinkman')
+        <h1>Goodbye Breaking Bad</h1>
+    @else
+        <h1>Hello {{ $name }}</h1>
+    @endif
 
+    @switch($i)
+        @case(1)
+        <h1>Hello {{ $name }}</h1>
+        @break
+        @case(2)
+        <h1>Hola {{ $name }}</h1>
+        @break
+    @endswitch
 @endsection
 
 @section ("contenido")

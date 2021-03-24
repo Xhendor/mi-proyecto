@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', "UserController@index");
+Route::get('/hola', "UserController@index");
+//Ruta para ejemplo de plantilla
+Route::get('/ejemplo', "UserController@ejemplo");
